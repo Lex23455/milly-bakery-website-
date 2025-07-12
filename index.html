@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Milly Stephen's Artisan Bakery - Crafting delicious custom cakes, cupcakes, and pastries for every special occasion. Wedding cakes, birthday cakes, and celebration desserts made with love.">
+    <meta name="keywords" content="bakery, custom cakes, wedding cakes, birthday cakes, cupcakes, pastries, artisan bakery, Milly Stephen, celebration cakes, dessert, Kenya">
+    <meta name="author" content="Milly Stephen">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://millystephenbakery.com/">
+    <meta property="og:title" content="Milly Stephen - Artisan Bakery">
+    <meta property="og:description" content="Crafting delicious custom cakes, cupcakes, and pastries for every special occasion. Wedding cakes, birthday cakes, and celebration desserts made with love.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Milly Stephen's Bakery">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://millystephenbakery.com/">
+    <meta property="twitter:title" content="Milly Stephen - Artisan Bakery">
+    <meta property="twitter:description" content="Crafting delicious custom cakes, cupcakes, and pastries for every special occasion. Wedding cakes, birthday cakes, and celebration desserts made with love.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#ef4444">
+    <meta name="msapplication-TileColor" content="#ef4444">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Milly's Bakery">
+    <meta name="application-name" content="Milly Stephen's Bakery">
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://millystephenbakery.com/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=32&q=80">
+    <link rel="apple-touch-icon" href="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=180&q=80">
+    
+    <title>Milly Stephen - Artisan Bakery | Custom Cakes & Pastries</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            background-image: url('https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .section.bg-gray-100 {
+            background-color: #f7fafc;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 8px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50%;
+            height: 3px;
+            background-color: #ef4444;
+            border-radius: 9999px;
+            transform-origin: left;
+            animation: underlineExpand 1s ease-out forwards;
+        }
+
+        /* Custom Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes backgroundZoom {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes underlineExpand {
+            from {
+                transform: scaleX(0);
+            }
+            to {
+                transform: scaleX(1);
+            }
+        }
+
+        @keyframes popIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes bakeryFloat {
+            0% { transform: translateY(0) scale(1); box-shadow: 0 4px 24px 0 #ffe06688; }
+            50% { transform: translateY(-18px) scale(1.04); box-shadow: 0 8px 32px 4px #ffe066cc; }
+            100% { transform: translateY(0) scale(1); box-shadow: 0 4px 24px 0 #ffe06688; }
+        }
+        
+        .bakery-animate {
+            animation: bakeryFloat 3s ease-in-out infinite;
+            transition: box-shadow 0.3s;
+        }
+
+        .animate-fade-in-down {
+            animation: fadeInDown 1s ease-out forwards;
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+            animation-delay: 0.3s;
+        }
+
+        .hero-background {
+            background-image: url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            animation: backgroundZoom 15s ease-in-out infinite alternate;
+        }
+
+        /* Animations for elements appearing on scroll */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .animate-on-scroll.slide-left {
+            transform: translateX(-50px);
+        }
+        
+        .animate-on-scroll.slide-left.is-visible {
+            transform: translateX(0);
+        }
+        
+        .animate-on-scroll.slide-right {
+            transform: translateX(50px);
+        }
+        
+        .animate-on-scroll.slide-right.is-visible {
+            transform: translateX(0);
+        }
+        
+        .animate-on-scroll.pop-in {
+            transform: scale(0.8);
+        }
+        
+        .animate-on-scroll.pop-in.is-visible {
+            transform: scale(1);
+        }
+
+        .star {
+            width: 16px;
+            height: 16px;
+            background: radial-gradient(circle, #fff 60%, #ffe066 100%);
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: twinkle 2s infinite alternate;
+            box-shadow: 0 0 8px 2px #ffe066;
+        }
+        
+        .star:nth-child(1) { animation-delay: 0s; }
+        .star:nth-child(2) { animation-delay: 0.5s; }
+        .star:nth-child(3) { animation-delay: 1s; }
+        .star:nth-child(4) { animation-delay: 1.5s; }
+        .star:nth-child(5) { animation-delay: 0.8s; }
+
+        @keyframes twinkle {
+            0% { opacity: 0.5; transform: scale(1) rotate(0deg);}
+            50% { opacity: 1; transform: scale(1.2) rotate(10deg);}
+            100% { opacity: 0.7; transform: scale(1) rotate(-10deg);}
+        }
+        
+        /* Form styling improvements */
+        .form-input:focus {
+            outline: none;
+            border-color: #ef4444;
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+        }
+        
+        /* Mobile responsiveness improvements */
+        @media (max-width: 768px) {
+            .hero-background {
+                background-attachment: scroll;
+            }
+            
+            .section-title::after {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md py-4 px-6 md:px-12 fixed w-full z-10 rounded-b-lg animate-fade-in-down">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-3">    
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQse720RmVvR2J1vAjZ4tCJPC5Vd5Jr-bqZTQ&s" alt="Milly Stephen's Bakery Logo" class="w-12 h-12 rounded-full shadow-md">
+                <span class="text-2xl font-bold text-gray-800">Milly Stephen's Bakery</span>
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-600 hover:text-red-500 transition duration-300">Home</a>
+                <a href="#gallery" class="text-gray-600 hover:text-red-500 transition duration-300">Gallery</a>
+                <a href="#order" class="text-gray-600 hover:text-red-500 transition duration-300">Place Order</a>
+                <a href="#contact" class="text-gray-600 hover:text-red-500 transition duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white mt-4 rounded-lg shadow-lg">
+            <a href="#home" class="block py-3 px-6 text-gray-700 hover:bg-gray-100 rounded-lg">Home</a>
+            <a href="#gallery" class="block py-3 px-6 text-gray-700 hover:bg-gray-100 rounded-lg">Gallery</a>
+            <a href="#order" class="block py-3 px-6 text-gray-700 hover:bg-gray-100 rounded-lg">Place Order</a>
+            <a href="#contact" class="block py-3 px-6 text-gray-700 hover:bg-gray-100 rounded-lg">Contact</a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section id="home" class="relative py-20 md:py-32 flex items-center justify-center min-h-screen-75 rounded-b-lg shadow-lg overflow-hidden">
+            <!-- Animated Background Image -->
+            <div class="absolute inset-0 hero-background"></div>
+            <!-- Gradient Overlay for readability -->
+            <div class="absolute inset-0 bg-gradient-to-r from-red-500 to-orange-500 opacity-70"></div>
+
+            <div class="container mx-auto text-center px-6 relative z-10 text-white">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-down">
+                    Milly Stephen's Bakery: Sweet Creations for Every Occasion!
+                </h1>
+                <p class="text-lg md:text-xl mb-8 animate-fade-in-up">
+                    Crafting delicious cakes and pastries with love and passion.
+                </p>
+                <a href="#order" class="bg-white text-red-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                    Order Your Custom Cake!
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 bg-white rounded-lg shadow-md mx-auto my-8 max-w-6xl px-6 animate-on-scroll">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-10 section-title">About Milly's Bakery</h2>
+                <div class="md:flex items-center justify-center md:space-x-10">
+                    <div class="md:w-1/3 mb-8 md:mb-0 px-6 relative">
+                        <img src="https://pbs.twimg.com/media/GvmJ7O9WoAAzzhb?format=jpg&name=large"
+                             alt="Milly Stephen Baking"
+                             class="rounded-full shadow-lg mx-auto w-56 h-56 object-cover border-4 border-red-400 transform hover:rotate-3 transition duration-300">
+                    </div>
+                    <div class="md:w-2/3 text-left animate-on-scroll slide-right">
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                            Welcome to Milly Stephen's Bakery! I'm Milly, and my journey into baking began with a simple love for creating joy through delicious treats. Every cake, cupcake, and pastry is baked from scratch using the finest ingredients, ensuring a taste that's as memorable as your special moments.
+                        </p>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            From elegant wedding cakes to fun birthday creations and everyday indulgences, I pour my heart into every detail. My goal is to make your celebrations sweeter and your cravings satisfied with custom designs and classic flavors.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cake Gallery Section -->
+        <section id="gallery" class="py-16 bg-gray-100 rounded-lg shadow-md mx-auto my-8 max-w-6xl px-6 animate-on-scroll">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-10 section-title">Our Delicious Creations</h2>
+                <p class="text-lg text-gray-700 mb-12">
+                    Explore a selection of our handcrafted cakes and pastries.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Gallery Item 1: Wedding Cake -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300 animate-on-scroll pop-in">
+                        <img src="https://funcakes.com/content/uploads/2021/08/Sugar-Lace-cake-960x960-c-default.jpg" alt="Elegant Wedding Cake" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Elegant Wedding Cakes</h3>
+                            <p class="text-gray-600 text-sm">
+                                Beautifully designed multi-tiered cakes for your special day.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Gallery Item 2: Birthday Cake -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300 animate-on-scroll pop-in" style="animation-delay: 0.1s;">
+                        <img src="https://artcaffemarket.co.ke/cdn/shop/files/dessert-2.webp?v=1744825543&width=720" alt="Fun Birthday Cake" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Custom Birthday Cakes</h3>
+                            <p class="text-gray-600 text-sm">
+                                Personalized cakes for all ages and themes, bringing your vision to life.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Gallery Item 3: Cupcakes -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300 animate-on-scroll pop-in" style="animation-delay: 0.2s;">
+                        <img src="https://artcaffemarket.co.ke/cdn/shop/files/Assorted-Muffins-367679.webp?v=1735178666&width=720" alt="Assorted Cupcakes" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Assorted Cupcakes</h3>
+                            <p class="text-gray-600 text-sm">
+                                Perfect bite-sized treats for parties or a sweet indulgence.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Gallery Item 4: Celebration Cakes -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300 animate-on-scroll pop-in" style="animation-delay: 0.3s;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLQKuCxfJxHfQGd9AaxwOMIIE-y6aSjaGH7w&s" alt="Anniversary Celebration Cake" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Celebration Cakes</h3>
+                            <p class="text-gray-600 text-sm">
+                                For anniversaries, graduations, baby showers, and all life's milestones.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Gallery Item 5: Pastries & Desserts -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300 animate-on-scroll pop-in" style="animation-delay: 0.4s;">
+                        <img src="https://hips.hearstapps.com/hmg-prod/images/delish-091621-samosas-05-jg-1632847516.jpg?crop=0.8335368335368335xw:1xh;center,top&resize=480:*" alt="Variety of Pastries and Desserts" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Pastries & Desserts</h3>
+                            <p class="text-gray-600 text-sm">
+                                A delightful selection of cookies, tarts, and other sweet treats.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Gallery Item 6: Seasonal Specials -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300 animate-on-scroll pop-in" style="animation-delay: 0.5s;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_-KluRp59o4vT-t96XDRbuLGCbmp00k-Hww&s" alt="Seasonal Themed Cake" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Seasonal Specials</h3>
+                            <p class="text-gray-600 text-sm">
+                                Unique flavors and designs inspired by the current season.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Place Order Section -->
+        <section id="order" class="py-16 bg-white rounded-lg shadow-md mx-auto my-8 max-w-6xl px-6 animate-on-scroll">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-10 section-title">Order Your Custom Cake</h2>
+                <p class="text-lg text-gray-700 mb-8">
+                    Let's create the perfect sweet centerpiece for your celebration!
+                </p>
+
+                <!-- Success/Error Messages -->
+                <div id="form-messages" class="max-w-xl mx-auto mb-6"></div>
+                
+                <form id="order-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="max-w-xl mx-auto bg-gray-50 p-8 rounded-lg shadow-inner">
+                    <div class="mb-6 text-left">
+                        <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Your Name *</label>
+                        <input type="text" id="name" name="name" required class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition duration-200 ease-in-out form-input" placeholder="Enter your full name">
+                        <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
+                    </div>
+                    <div class="mb-6 text-left">
+                        <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Your Email *</label>
+                        <input type="email" id="email" name="email" required class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition duration-200 ease-in-out form-input" placeholder="Enter your email address">
+                        <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
+                    </div>
+                    <div class="mb-6 text-left">
+                        <label for="phone" class="block text-gray-700 text-sm font-bold mb-2">Your Phone (Optional)</label>
+                        <input type="tel" id="phone" name="phone" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition duration-200 ease-in-out form-input" placeholder="+254 750 760725">
+                    </div>
+                    <div class="mb-6 text-left">
+                        <label for="cakeType" class="block text-gray-700 text-sm font-bold mb-2">Type of Cake *</label>
+                        <select id="cakeType" name="cakeType" required class="shadow border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition duration-200 ease-in-out form-input">
+                            <option value="">Select Cake Type</option>
+                            <option value="wedding">Wedding Cake</option>
+                            <option value="birthday">Birthday Cake</option>
+                            <option value="cupcakes">Cupcakes</option>
+                            <option value="celebration">Celebration Cake (Anniversary, Graduation, etc.)</option>
+                            <option value="custom">Custom Design</option>
+                            <option value="pastries">Pastries & Desserts</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
+                    </div>
+                    <div class="mb-6 text-left">
+                        <label for="flavor" class="block text-gray-700 text-sm font-bold mb-2">Preferred Flavor(s) *</label>
+                        <input type="text" id="flavor" name="flavor" required class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition duration-200 ease-in-out form-input" placeholder="Vanilla, Chocolate, Red Velvet, Lemon...">
+                        <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
+                    </div>
+                    <div class="mb-6 text-left">
+                        <label for="sizeServings" class="block text-gray-700 text-sm font-bold mb-2">Size / Number of Servings *</label>
+                        <input type="text" id="sizeServings" name="sizeServings" required class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition duration-200 ease-in-out form-input" placeholder="e.g., 8-inch round, 20 servings, 2 dozen cupcakes">
+                        <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
+                    </div>
+                    <div class="mb-6 text-left">
+                        <label for="decorationTheme" class="block text-gray-700 text-sm font-bold mb-2">Decoration / Theme Ideas (Optional)</label>
+                        <textarea id="decorationTheme" name="decorationTheme" rows="3" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition duration-200 ease-in-out form-input" placeholder="Tell us about your desired design, colors, or theme..."></textarea>
+                    </div>
+                    <div class="mb-6 text-left">
+                        <label for="deliveryDate" class="block text-gray-700 text-sm font-bold mb-2">Preferred Delivery/Pickup Date *</label>
+                        <input type="date" id="deliveryDate" name="deliveryDate" required class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition duration-200 ease-in-out form-input">
+                        <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
+                    </div>
+                    <div class="mb-6 text-left">
+                        <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Additional Notes / Message</label>
+                        <textarea id="message" name="message" rows="5" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition duration-200 ease-in-out form-input" placeholder="Any other details or questions you have..."></textarea>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <button type="submit" id="submit-btn" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full focus:outline-none focus:shadow-outline transition duration-300 transform hover:scale-105 shadow-md">
+                            <span id="submit-text">Submit Order Request</span>
+                            <span id="submit-loading" class="hidden">
+                                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                </svg>
+                                Sending...
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-gray-100 rounded-lg shadow-md mx-auto my-8 max-w-6xl px-6 animate-on-scroll">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-10 section-title">Get In Touch</h2>
+                <p class="text-lg text-gray-700 mb-8">
+                    Have questions about our cakes or want to discuss a custom order? Reach out!
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-8">
+                    <!-- Email -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center w-full md:w-1/3 lg:w-1/4 transform hover:scale-105 transition duration-300 animate-on-scroll pop-in">
+                        <svg class="w-12 h-12 text-red-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2 2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v4m6 4v4a2 2 0 002 2h4a2 2 0 002-2v-4"></path>
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Email Us</h3>
+                        <p class="text-gray-600 mb-4">millystephenbakery@example.com</p>
+                        <a href="mailto:millystephenbakery@example.com" class="text-red-600 hover:text-red-800 font-medium">Send Email</a>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center w-full md:w-1/3 lg:w-1/4 transform hover:scale-105 transition duration-300 animate-on-scroll pop-in" style="animation-delay: 0.1s;">
+                        <svg class="w-12 h-12 text-red-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Call Us</h3>
+                        <p class="text-gray-600 mb-4">+254 750 760725</p>
+                        <a href="tel:+15559876543" class="text-red-600 hover:text-red-800 font-medium">Call Now</a>
+                    </div>
+
+                    <!-- Social Media (Example: Instagram for a bakery) -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center w-full md:w-1/3 lg:w-1/4 transform hover:scale-105 transition duration-300 animate-on-scroll pop-in" style="animation-delay: 0.2s;">
+                        <svg class="w-12 h-12 text-red-500 mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.5 2C4.463 2 2 4.463 2 7.5v9C2 19.537 4.463 22 7.5 22h9c3.037 0 5.5-2.463 5.5-5.5v-9C22 4.463 19.537 2 16.5 2h-9zm9 2h-9c-1.93 0-3.5 1.57-3.5 3.5v9c0 1.93 1.57 3.5 3.5 3.5h9c1.93 0 3.5-1.57 3.5-3.5v-9c0-1.93-1.57-3.5-3.5-3.5zm-4.5 2c-2.485 0-4.5 2.015-4.5 4.5s2.015 4.5 4.5 4.5 4.5-2.015 4.5-4.5-2.015-4.5-4.5-4.5zm0 2c1.38 0 2.5 1.12 2.5 2.5s-1.12 2.5-2.5 2.5-2.5-1.12-2.5-2.5 1.12-2.5 2.5-2.5zm6.5-5c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1z"/>
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Follow Us</h3>
+                        <p class="text-gray-600 mb-4">On Instagram for daily delights</p>
+                        <a href="https://www.instagram.com/MillysBakery" target="_blank" class="text-red-600 hover:text-red-800 font-medium">@MillysBakery</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12 rounded-t-lg shadow-lg">
+        <div class="container mx-auto text-center px-6">
+            <p class="mb-4">&copy; 2025 Milly Stephen's Bakery. All rights reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#home" class="text-gray-400 hover:text-white transition duration-300">Home</a>
+                <a href="#gallery" class="text-gray-400 hover:text-white transition duration-300">Gallery</a>
+                <a href="#order" class="text-gray-400 hover:text-white transition duration-300">Order</a>
+                <a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu if open
+                if (document.getElementById('mobile-menu').classList.contains('block')) {
+                    document.getElementById('mobile-menu').classList.remove('block');
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('block');
+        });
+
+        // Intersection Observer for scroll animations
+        const animateOnScrollElements = document.querySelectorAll('.animate-on-scroll');
+
+        const observerOptions = {
+            root: null, /* relative to viewport */
+            rootMargin: '0px',
+            threshold: 0.1 /* 10% of element visible to trigger */
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); // Stop observing once animated
+                }
+            });
+        }, observerOptions);
+
+        animateOnScrollElements.forEach(element => {
+            observer.observe(element);
+        });
+
+        // Form Handling
+        const orderForm = document.getElementById('order-form');
+        const formMessages = document.getElementById('form-messages');
+        const submitBtn = document.getElementById('submit-btn');
+        const submitText = document.getElementById('submit-text');
+        const submitLoading = document.getElementById('submit-loading');
+
+        // Form validation
+        function validateForm() {
+            let isValid = true;
+            const requiredFields = orderForm.querySelectorAll('[required]');
+            
+            // Clear previous error messages
+            orderForm.querySelectorAll('.error-message').forEach(msg => {
+                msg.classList.add('hidden');
+                msg.textContent = '';
+            });
+
+            requiredFields.forEach(field => {
+                const errorElement = field.parentElement.querySelector('.error-message');
+                
+                if (!field.value.trim()) {
+                    isValid = false;
+                    errorElement.textContent = 'This field is required';
+                    errorElement.classList.remove('hidden');
+                    field.classList.add('border-red-500');
+                } else {
+                    field.classList.remove('border-red-500');
+                }
+
+                // Email validation
+                if (field.type === 'email' && field.value.trim()) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(field.value)) {
+                        isValid = false;
+                        errorElement.textContent = 'Please enter a valid email address';
+                        errorElement.classList.remove('hidden');
+                        field.classList.add('border-red-500');
+                    }
+                }
+
+                // Date validation
+                if (field.type === 'date' && field.value) {
+                    const selectedDate = new Date(field.value);
+                    const today = new Date();
+                    today.setHours(0, 0, 0, 0);
+                    
+                    if (selectedDate < today) {
+                        isValid = false;
+                        errorElement.textContent = 'Please select a future date';
+                        errorElement.classList.remove('hidden');
+                        field.classList.add('border-red-500');
+                    }
+                }
+            });
+
+            return isValid;
+        }
+
+        // Show form message
+        function showMessage(message, type) {
+            formMessages.innerHTML = `
+                <div class="p-4 rounded-lg ${type === 'success' ? 'bg-green-100 text-green-700 border border-green-400' : 'bg-red-100 text-red-700 border border-red-400'}">
+                    ${message}
+                </div>
+            `;
+            formMessages.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        // Handle form submission
+        orderForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            if (!validateForm()) {
+                showMessage('Please correct the errors above and try again.', 'error');
+                return;
+            }
+
+            // Show loading state
+            submitText.classList.add('hidden');
+            submitLoading.classList.remove('hidden');
+            submitBtn.disabled = true;
+
+            try {
+                const formData = new FormData(orderForm);
+                
+                // Add subject line for better email organization
+                formData.append('_subject', 'New Cake Order Request - Milly Stephen Bakery');
+                
+                const response = await fetch(orderForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    showMessage('Thank you! Your order request has been sent successfully. We\'ll get back to you soon!', 'success');
+                    orderForm.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                console.error('Form submission error:', error);
+                showMessage('Sorry, there was an error sending your request. Please try again or contact us directly.', 'error');
+            } finally {
+                // Reset button state
+                submitText.classList.remove('hidden');
+                submitLoading.classList.add('hidden');
+                submitBtn.disabled = false;
+            }
+        });
+
+        // Real-time validation
+        orderForm.querySelectorAll('input, select, textarea').forEach(field => {
+            field.addEventListener('blur', function() {
+                const errorElement = this.parentElement.querySelector('.error-message');
+                
+                if (this.hasAttribute('required') && !this.value.trim()) {
+                    errorElement.textContent = 'This field is required';
+                    errorElement.classList.remove('hidden');
+                    this.classList.add('border-red-500');
+                } else if (this.type === 'email' && this.value.trim()) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(this.value)) {
+                        errorElement.textContent = 'Please enter a valid email address';
+                        errorElement.classList.remove('hidden');
+                        this.classList.add('border-red-500');
+                    } else {
+                        errorElement.classList.add('hidden');
+                        this.classList.remove('border-red-500');
+                    }
+                } else {
+                    errorElement.classList.add('hidden');
+                    this.classList.remove('border-red-500');
+                }
+            });
+
+            field.addEventListener('input', function() {
+                const errorElement = this.parentElement.querySelector('.error-message');
+                if (this.value.trim()) {
+                    errorElement.classList.add('hidden');
+                    this.classList.remove('border-red-500');
+                }
+            });
+        });
+
+        // Set minimum date for delivery date field
+        const deliveryDateField = document.getElementById('deliveryDate');
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        deliveryDateField.min = tomorrow.toISOString().split('T')[0];
+    </script>
+</body>
+</html>
